@@ -1,0 +1,15 @@
+@reference '../index.css'
+
+@layer components{
+    .kbd {
+        @apply rounded border border-border px-1.5 py-0.5 font-mono text-xs;
+    }
+}
+
+@layer base {
+    kbd {
+            @apply rounded border border-border px-1.5 py-0.5 font-mono text-xs;
+    }
+}
+
+
