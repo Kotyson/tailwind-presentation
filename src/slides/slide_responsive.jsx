@@ -6,11 +6,11 @@ import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs"
 
 const BREAKPOINTS = [
 	{ prefix: "-",  label: "výchozí", minPx: 0,    desc: "Vždy platí (bez prefixu)" },
-	{ prefix: "sm", label: "small",   minPx: 640,  desc: "≥ 640 px" },
-	{ prefix: "md", label: "medium",  minPx: 768,  desc: "≥ 768 px" },
-	{ prefix: "lg", label: "large",   minPx: 1024, desc: "≥ 1024 px" },
-	{ prefix: "xl", label: "x-large", minPx: 1280, desc: "≥ 1280 px" },
-	{ prefix: "2xl",label: "2x-large",minPx: 1536, desc: "≥ 1536 px" },
+	{ prefix: "sm", label: "small",   minPx: 640,  desc: ">= 640 px" },
+	{ prefix: "md", label: "medium",  minPx: 768,  desc: ">= 768 px" },
+	{ prefix: "lg", label: "large",   minPx: 1024, desc: ">= 1024 px" },
+	{ prefix: "xl", label: "x-large", minPx: 1280, desc: ">= 1280 px" },
+	{ prefix: "2xl",label: "2x-large",minPx: 1536, desc: ">= 1536 px" },
 ]
 
 const GRID_COLS = [1, 2, 3, 4]
@@ -79,7 +79,7 @@ export default function SlideResponsive() {
 
 									<div className="rounded-lg bg-amber-50 border border-amber-200 p-3 text-xs text-amber-800 space-y-1">
 										<p className="font-semibold">Mobile-first = prefix platí od dané šířky <span className="underline">a výše</span>.</p>
-										<p><code className="font-mono">md:text-lg</code> = text-lg na viewportu ≥ 768 px.</p>
+										<p><code className="font-mono">md:text-lg</code> = text-lg na viewportu {">"}= 768 px.</p>
 										<p>Bez prefixu = platí vždy (nejmenší výchozí stav).</p>
 									</div>
 
@@ -167,7 +167,7 @@ export default function SlideResponsive() {
 									</div>
 
 									<div className="space-y-2">
-										<div className="text-sm font-medium">md: sloupce (≥ 768 px)</div>
+										<div className="text-sm font-medium">md: sloupce ({">"}= 768 px)</div>
 										<div className="flex gap-2">
 											{GRID_COLS.map((n) => (
 												<Button key={n} size="xs" variant={n === mdCols ? "default" : "outline"} onClick={() => setMdCols(n)}>
@@ -178,7 +178,7 @@ export default function SlideResponsive() {
 									</div>
 
 									<div className="space-y-2">
-										<div className="text-sm font-medium">lg: sloupce (≥ 1024 px)</div>
+										<div className="text-sm font-medium">lg: sloupce ({">"}= 1024 px)</div>
 										<div className="flex gap-2">
 											{GRID_COLS.map((n) => (
 												<Button key={n} size="xs" variant={n === lgCols ? "default" : "outline"} onClick={() => setLgCols(n)}>
@@ -205,8 +205,8 @@ export default function SlideResponsive() {
 								<div className="text-xs text-muted-foreground">Náhled (simuluje výchozí / md / lg)</div>
 								{[
 									{ label: "Mobile (výchozí)", cols: defaultCols, color: "bg-primary/20 border-primary/40" },
-									{ label: "md: ≥ 768 px", cols: mdCols, color: "bg-chart-2/20 border-chart-2/40" },
-									{ label: "lg: ≥ 1024 px", cols: lgCols, color: "bg-chart-5/20 border-chart-5/40" },
+									{ label: "md: >= 768 px", cols: mdCols, color: "bg-chart-2/20 border-chart-2/40" },
+									{ label: "lg: >= 1024 px", cols: lgCols, color: "bg-chart-5/20 border-chart-5/40" },
 								].map(({ label, cols, color }) => (
 									<div key={label} className="space-y-1">
 										<div className="text-[10px] text-muted-foreground font-mono">{label}</div>
@@ -238,7 +238,7 @@ export default function SlideResponsive() {
 									</div>
 
 									<div className="space-y-2">
-										<div className="text-sm font-medium">md: směr (≥ 768 px)</div>
+										<div className="text-sm font-medium">md: směr ({">"}= 768 px)</div>
 										<div className="flex gap-2">
 											{FLEX_DIRS.map((d) => (
 												<Button key={d} size="xs" variant={d === mdDir ? "default" : "outline"} onClick={() => setMdDir(d)}>
@@ -268,7 +268,7 @@ export default function SlideResponsive() {
 							<div className="flex flex-col justify-center space-y-4">
 								{[
 									{ label: "Mobile (výchozí)", dir: defaultDir, color: "bg-primary/20 border-primary/40 text-primary" },
-									{ label: "md: ≥ 768 px", dir: mdDir, color: "bg-chart-2/20 border-chart-2/40 text-chart-2" },
+									{ label: "md: >= 768 px", dir: mdDir, color: "bg-chart-2/20 border-chart-2/40 text-chart-2" },
 								].map(({ label, dir, color }) => (
 									<div key={label} className="space-y-1">
 										<div className="text-[10px] text-muted-foreground font-mono">{label} - {dir}</div>

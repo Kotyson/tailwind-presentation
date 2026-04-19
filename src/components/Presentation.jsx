@@ -50,7 +50,7 @@ export default function Presentation() {
       <div className="pointer-events-none absolute inset-x-0 bottom-0 flex justify-center p-4">
         <Card className="pointer-events-auto flex w-full max-w-2xl flex-row items-center gap-3 rounded-2xl px-4 py-3 opacity-80 bg-card/70 backdrop-blur-lg">
           <Button variant="ghost" size="sm" onClick={prev} disabled={index === 0}>
-            ← Předchozí
+            {"<"} Předchozí
           </Button>
 
           {/* Progress dots */}
@@ -76,7 +76,7 @@ export default function Presentation() {
           </Badge>
 
           <Button variant="ghost" size="sm" onClick={next} disabled={index === total - 1}>
-            Další →
+            Další {">"}
           </Button>
         </Card>
       </div>

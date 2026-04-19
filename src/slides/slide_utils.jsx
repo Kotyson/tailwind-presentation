@@ -211,7 +211,7 @@ export default function SlideUtils() {
 									</div>
 
 									<div className="rounded-lg bg-muted/50 p-3 text-xs text-muted-foreground space-y-1">
-										<p>Číslo odstínu = <strong className="text-foreground">světlost</strong> na stupnici <code className="font-mono">50 → 900</code>.</p>
+										<p>Číslo odstínu = <strong className="text-foreground">světlost</strong> na stupnici <code className="font-mono">50  900</code>.</p>
 										<p><code className="font-mono">50</code> = nejsvětlejší &nbsp;·&nbsp; <code className="font-mono">900</code> = nejtmavší.</p>
 										<p>Hodnota <code className="font-mono">500</code> bývá „základní" barva palety.</p>
 									</div>

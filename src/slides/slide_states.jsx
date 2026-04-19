@@ -215,7 +215,7 @@ export default function SlideStates() {
 									</div>
 									<div className="flex justify-center">
 										<Button onClick={() => setHovered((h) => !h)}>
-											{hovered ? " Zpět" : "Animovat →"}
+											{hovered ? " Zpět" : "Animovat "}
 										</Button>
 									</div>
 								</div>
