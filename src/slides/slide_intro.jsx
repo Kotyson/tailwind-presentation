@@ -47,7 +47,7 @@ export default function SlideIntro() {
               </p>
             </CardContent>
           </Card>
-          <Card className="col-span-3 border-2 border-red-400 bg-red-50">
+          <Card className="col-span-3 border-2 border-red-400 bg-red-50/50 dark:bg-red-900">
             <CardContent className="pt-5 space-y-1">
               <div className="text-sm font-semibold">Tailwind není UI kit ani Bootstrap</div>
               <p className="text-sm text-muted-foreground">
