@@ -1,4 +1,4 @@
-import { Badge } from "@/components/ui/badge"
+﻿import { Badge } from "@/components/ui/badge"
 import { Card, CardContent } from "@/components/ui/card"
 import { SlideLink } from "@/components/SlideLink"
 
@@ -12,7 +12,7 @@ export default function SlidePlayground() {
 					<Badge variant="outline" className="uppercase tracking-widest text-xs">Nástroje</Badge>
 					<h1 className="text-5xl font-bold tracking-tight font-heading">Tailwind Playground</h1>
 					<p className="text-lg text-muted-foreground max-w-2xl">
-						Oficiální online editor — zkouší Tailwind hned v prohlížeči, bez instalace.
+						Oficiální online editor - zkouší Tailwind hned v prohlížeči, bez instalace.
 					</p>
 				</div>
 
@@ -22,7 +22,7 @@ export default function SlidePlayground() {
 						<CardContent className="pt-5 space-y-1">
 							<div className="text-sm font-semibold">Co to je?</div>
 							<p className="text-sm text-muted-foreground">
-								Webový editor s živým náhledem. Píšeš HTML s Tailwind třídami a okamžitě vidíš výsledek — žádný build, žádná instalace.
+								Webový editor s živým náhledem. Píšeš HTML s Tailwind třídami a okamžitě vidíš výsledek - žádný build, žádná instalace.
 							</p>
 						</CardContent>
 					</Card>
@@ -43,7 +43,7 @@ export default function SlidePlayground() {
 						<CardContent className="pt-5 space-y-1">
 							<div className="text-sm font-semibold">Jak funguje sdílení?</div>
 							<p className="text-sm text-muted-foreground">
-								Každá úprava se dá uložit jako unikátní URL. Stačí odkaz poslat kolegovi — otevře přesně stejný stav editoru.
+								Každá úprava se dá uložit jako unikátní URL. Stačí odkaz poslat kolegovi - otevře přesně stejný stav editoru.
 							</p>
 						</CardContent>
 					</Card>

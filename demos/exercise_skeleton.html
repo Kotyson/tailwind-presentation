@@ -1,0 +1,290 @@
+<!--
+  ╔══════════════════════════════════════════════════════════════╗
+  ║  CVIČENÍ — HTML kostra                                       ║
+  ║  Tailwind CSS v4 (browser CDN)                               ║
+  ║                                                              ║
+  ║  Úkol: nastyluj tuto stránku pomocí Tailwind tříd.           ║
+  ║  Každá sekce má komentář co by měla dělat / vypadat.         ║
+  ║  Třída TODO = sem přidej Tailwind třídy.                     ║
+  ╚══════════════════════════════════════════════════════════════╝
+-->
+
+<!--
+  ═══════════════════════════════════════════════════════════════
+  NAVBAR
+  Cíl: lepivá lišta nahoře, logo vlevo, odkazy vpravo.
+  Použij: sticky top-0 z-50, flex, justify-between, items-center,
+          px-6 py-4, backdrop-blur, bg-white/80, border-b
+  ═══════════════════════════════════════════════════════════════
+-->
+<nav class="TODO">
+  <!-- Logo -->
+  <a href="#" class="TODO">
+    <!-- Zkus: text-xl font-bold tracking-tight -->
+    DevPortfolio
+  </a>
+
+  <!-- Navigační odkazy -->
+  <div class="TODO">
+    <!-- Zkus: flex gap-6, text-sm text-zinc-500 hover:text-zinc-900 transition-colors -->
+    <a href="#projekty" class="TODO">Projekty</a>
+    <a href="#dovednosti" class="TODO">Dovednosti</a>
+    <a href="#kontakt" class="TODO">Kontakt</a>
+
+    <!-- Dark mode tlačítko (bonus) -->
+    <button
+      onclick="
+        document.documentElement.classList.toggle('dark');
+        this.textContent = document.documentElement.classList.contains('dark')
+          ? 'Light'
+          : 'Dark';
+      "
+      class="TODO"
+    >
+      Dark
+    </button>
+  </div>
+</nav>
+
+<!--
+  ═══════════════════════════════════════════════════════════════
+  HERO SEKCE
+  Cíl: velký centrovaný nadpis se stručným popisem a CTA tlačítkem.
+  Použij: text-center, max-w-2xl mx-auto, py-24 px-6,
+          text-5xl font-bold tracking-tight,
+          text-muted-foreground (nebo text-zinc-500)
+  ═══════════════════════════════════════════════════════════════
+-->
+<section class="TODO">
+  <div class="TODO">
+    <!-- Zkus: inline-block px-3 py-1 text-xs font-semibold rounded-full bg-violet-100 text-violet-700 mb-4 -->
+    <span class="TODO">Webový vývojář</span>
+
+    <!-- Hlavní nadpis — zkus: text-5xl font-bold tracking-tight mt-2 -->
+    <h1 class="TODO">
+      Ahoj, jsem <span class="TODO">Jan Novák</span>
+      <!-- Zkus: text-violet-600 -->
+    </h1>
+
+    <!-- Podnadpis -->
+    <p class="TODO">
+      <!-- Zkus: mt-4 text-lg text-zinc-500 leading-relaxed -->
+      Tvořím moderní weby s důrazem na výkon, přístupnost a čistý kód. Miluji
+      Tailwind CSS a otevřený software.
+    </p>
+
+    <!-- CTA tlačítka -->
+    <div class="TODO">
+      <!-- Zkus: mt-8 flex gap-3 justify-center -->
+      <a href="#projekty" class="TODO">
+        <!-- Zkus: px-5 py-2.5 bg-violet-600 text-white text-sm font-semibold rounded-xl
+                   hover:bg-violet-700 active:scale-95 transition-all -->
+        Zobrazit projekty
+      </a>
+      <a href="#kontakt" class="TODO">
+        <!-- Zkus: px-5 py-2.5 border border-zinc-300 text-sm font-semibold rounded-xl
+                   hover:bg-zinc-50 transition-colors -->
+        Kontaktovat
+      </a>
+    </div>
+  </div>
+</section>
+
+<!--
+  ═══════════════════════════════════════════════════════════════
+  SEKCE: PROJEKTY (grid karet)
+  Cíl: 3 karty vedle sebe (na velkém displeji), 1 na mobilu.
+  Použij: max-w-5xl mx-auto px-6 py-16,
+          grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6
+  ═══════════════════════════════════════════════════════════════
+-->
+<section id="projekty" class="TODO">
+  <!-- Nadpis sekce -->
+  <div class="TODO">
+    <!-- Zkus: text-center mb-10 -->
+    <h2 class="TODO">Moje projekty</h2>
+    <!-- Zkus: text-3xl font-bold tracking-tight -->
+    <p class="TODO">Vybrané projekty z posledního roku.</p>
+    <!-- Zkus: mt-2 text-zinc-500 -->
+  </div>
+
+  <!-- Grid karet -->
+  <div class="TODO">
+    <!--
+      KARTA 1
+      Použij: bg-white rounded-2xl border border-zinc-200 overflow-hidden
+              hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300
+    -->
+    <div class="TODO">
+      <!-- Barevný pruh nahoře — zkus: h-[5px] bg-gradient-to-r from-violet-500 to-purple-400 -->
+      <div class="TODO"></div>
+
+      <div class="TODO">
+        <!-- Zkus: p-6 -->
+
+        <!-- Badge / status — zkus: inline-block px-2 py-1 text-xs font-semibold
+                                    text-violet-700 bg-violet-100 rounded-full -->
+        <span class="TODO">React</span>
+
+        <!-- Název projektu -->
+        <h3 class="TODO">E-shop frontend</h3>
+        <!-- Zkus: mt-3 text-lg font-bold text-zinc-900 -->
+
+        <!-- Popis -->
+        <p class="TODO">
+          <!-- Zkus: mt-2 text-sm text-zinc-500 leading-relaxed -->
+          Moderní e-shop postavený na Vite, React a Tailwind CSS s tmavým
+          režimem.
+        </p>
+
+        <!-- Tagy -->
+        <div class="TODO">
+          <!-- Zkus: mt-4 flex flex-wrap gap-2 -->
+          <span class="TODO">React</span>
+          <span class="TODO">Tailwind</span>
+          <span class="TODO">Vite</span>
+          <!-- Tagy: px-2 py-1 text-xs font-medium text-zinc-600 bg-zinc-100 rounded-md -->
+        </div>
+
+        <!-- Progress bar -->
+        <div class="TODO">
+          <!-- Zkus: mt-5 -->
+          <div class="TODO">
+            <!-- Zkus: flex justify-between text-xs text-zinc-500 mb-1 -->
+            <span>Postup</span>
+            <span>80 %</span>
+          </div>
+          <div class="TODO">
+            <!-- Track: w-full h-[5px] bg-zinc-100 rounded-full -->
+            <div class="TODO"></div>
+            <!-- Fill: h-[5px] w-[80%] bg-violet-500 rounded-full -->
+          </div>
+        </div>
+
+        <!-- Tlačítko -->
+        <button class="TODO">
+          <!-- Zkus: mt-5 w-full py-2 bg-violet-600 text-white text-sm font-semibold rounded-xl
+                     hover:bg-violet-700 active:scale-95 transition-all cursor-pointer -->
+          Zobrazit projekt
+        </button>
+      </div>
+    </div>
+    <!-- /KARTA 1 -->
+
+    <!--
+      KARTA 2
+    -->
+    <div class="TODO">
+      <div class="TODO"></div>
+      <!-- Barevný pruh: h-[5px] bg-gradient-to-r from-emerald-500 to-teal-400 -->
+      <div class="TODO">
+        <span class="TODO">Node.js</span>
+        <h3 class="TODO">REST API</h3>
+        <p class="TODO">
+          Backend pro správu uživatelů a produktů. JWT autentizace, PostgreSQL.
+        </p>
+        <div class="TODO">
+          <span class="TODO">Node.js</span>
+          <span class="TODO">PostgreSQL</span>
+          <span class="TODO">JWT</span>
+        </div>
+        <div class="TODO">
+          <div class="TODO"><span>Postup</span><span>100 %</span></div>
+          <div class="TODO"><div class="TODO"></div></div>
+          <!-- Fill: h-[5px] w-full bg-emerald-500 rounded-full -->
+        </div>
+        <button class="TODO">Zobrazit projekt</button>
+      </div>
+    </div>
+    <!-- /KARTA 2 -->
+
+    <!--
+      KARTA 3
+    -->
+    <div class="TODO">
+      <div class="TODO"></div>
+      <!-- Barevný pruh: h-[5px] bg-gradient-to-r from-sky-500 to-blue-400 -->
+      <div class="TODO">
+        <span class="TODO">Plánováno</span>
+        <h3 class="TODO">Design systém</h3>
+        <p class="TODO">
+          Sdílená knihovna komponent se shadcn/ui, dokumentací a Storybookem.
+        </p>
+        <div class="TODO">
+          <span class="TODO">shadcn/ui</span>
+          <span class="TODO">Storybook</span>
+          <span class="TODO">Figma</span>
+        </div>
+        <div class="TODO">
+          <div class="TODO"><span>Postup</span><span>20 %</span></div>
+          <div class="TODO"><div class="TODO"></div></div>
+          <!-- Fill: h-[5px] w-[20%] bg-sky-500 rounded-full -->
+        </div>
+        <button class="TODO">Zobrazit projekt</button>
+      </div>
+    </div>
+    <!-- /KARTA 3 -->
+  </div>
+  <!-- /Grid karet -->
+</section>
+
+<!--
+  ═══════════════════════════════════════════════════════════════
+  SEKCE: DOVEDNOSTI
+  Cíl: přehled technologií ve flexboxu / wrapping pilulky.
+  Použij: max-w-3xl mx-auto px-6 py-16 text-center
+  ═══════════════════════════════════════════════════════════════
+-->
+<section id="dovednosti" class="TODO">
+  <h2 class="TODO">Dovednosti</h2>
+
+  <!-- Flex wrap s pilulkami — zkus: mt-6 flex flex-wrap justify-center gap-3 -->
+  <div class="TODO">
+    <!-- Pilulka: px-4 py-2 text-sm font-medium rounded-full border border-zinc-200
+                 bg-white text-zinc-700 hover:border-violet-400 hover:text-violet-600
+                 transition-colors cursor-default -->
+    <span class="TODO">HTML & CSS</span>
+    <span class="TODO">JavaScript</span>
+    <span class="TODO">TypeScript</span>
+    <span class="TODO">React</span>
+    <span class="TODO">Tailwind CSS</span>
+    <span class="TODO">Vite</span>
+    <span class="TODO">Node.js</span>
+    <span class="TODO">Git</span>
+    <span class="TODO">Figma</span>
+  </div>
+</section>
+
+<!--
+  ═══════════════════════════════════════════════════════════════
+  SEKCE: KONTAKT
+  Cíl: jednoduchý CTA blok s tlačítkem na email.
+  Použij: text-center py-20 px-6, bg-violet-50 nebo jemný gradient
+  ═══════════════════════════════════════════════════════════════
+-->
+<section id="kontakt" class="TODO">
+  <div class="TODO">
+    <!-- max-w-xl mx-auto -->
+
+    <h2 class="TODO">Pojďme spolupracovat</h2>
+    <p class="TODO">
+      Hledáš vývojáře na projekt? Ozvi se mi na email nebo LinkedInu.
+    </p>
+
+    <div class="TODO">
+      <!-- Zkus: mt-8 flex gap-3 justify-center flex-wrap -->
+      <a href="mailto:jan@example.com" class="TODO"> jan@example.com </a>
+      <a href="https://linkedin.com" target="_blank" class="TODO"> LinkedIn </a>
+    </div>
+  </div>
+</section>
+
+<!--
+  ═══════════════════════════════════════════════════════════════
+  FOOTER
+  Použij: text-center py-8 border-t border-zinc-200 text-sm text-zinc-400
+  ═══════════════════════════════════════════════════════════════
+-->
+<footer class="TODO">
+  <p>© 2025 Jan Novák · Postaveno s Tailwind CSS</p>
+</footer>

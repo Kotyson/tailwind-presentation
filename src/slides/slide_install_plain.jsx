@@ -1,4 +1,4 @@
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+﻿import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { SlideLink } from "@/components/SlideLink"
 
@@ -12,7 +12,7 @@ export default function SlideInstallPlain() {
           <Badge variant="outline" className="uppercase tracking-widest text-xs">Instalace</Badge>
           <h1 className="text-5xl font-bold tracking-tight font-heading">Tailwind CLI</h1>
           <p className="text-xl text-muted-foreground">
-            Tailwind funguje s jakýmkoliv projektem — stačí HTML soubor a npm.
+            Tailwind funguje s jakýmkoliv projektem - stačí HTML soubor a npm.
           </p>
         </div>
 
@@ -41,7 +41,7 @@ npm install tailwindcss @tailwindcss/cli`}</pre>
 
           <Card>
             <CardHeader>
-              <CardTitle className="text-sm text-muted-foreground">3. Spusť Tailwind CLI — sleduje soubory a generuje výstup</CardTitle>
+              <CardTitle className="text-sm text-muted-foreground">3. Spusť Tailwind CLI - sleduje soubory a generuje výstup</CardTitle>
             </CardHeader>
             <CardContent>
               <pre className="rounded-lg bg-muted px-4 py-3 font-mono text-sm leading-relaxed overflow-x-auto">{`npx @tailwindcss/cli -i src/input.css -o src/output.css --watch`}</pre>

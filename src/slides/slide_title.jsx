@@ -1,4 +1,4 @@
-import { Badge } from "@/components/ui/badge"
+﻿import { Badge } from "@/components/ui/badge"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Kbd } from "@/components/ui/kbd"
 
@@ -35,7 +35,7 @@ export default function Slide01Intro() {
                     <CardTitle>Jak navigovat?</CardTitle>
                 </CardHeader>
                 <CardContent className="text-sm text-muted-foreground pt-6">
-                    Použij <Kbd>←</Kbd> <Kbd>→</Kbd> nebo navigační lištu pro pohyb mezi snímky.
+                    Použij <Kbd></Kbd> <Kbd>→</Kbd> nebo navigační lištu pro pohyb mezi snímky.
                 </CardContent>
             </Card>
          </div>

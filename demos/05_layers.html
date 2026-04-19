@@ -1,0 +1,156 @@
+<style type="text/tailwindcss">
+  /*
+      ✅ CO JSME SE NAUČILI: @layer components + @apply
+      ────────────────────────────────────────────────────────────────
+      Všechny opakující se řetězce utility tříd jsme přesunuli do CSS.
+      HTML je teď čitelné jako sémantický kód — žádné "class soup".
+      Vizuální výsledek je IDENTICKÝ s předchozím souborem (04_states).
+
+      Porovnej HTML zde vs. v 04_states.html:
+        DŘÍVE:  class="bg-white rounded-2xl shadow-[...] border border-zinc-200
+                        overflow-hidden hover:shadow-xl hover:-translate-y-1.5
+                        transition-all duration-300"
+        NYNÍ:   class="card"
+    */
+
+  @layer components {
+    .card {
+      @apply bg-white rounded-2xl border border-zinc-200 overflow-hidden
+               hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300;
+    }
+    .card-accent-violet {
+      @apply h-[5px] bg-gradient-to-r from-[#7c3aed] to-[#a78bfa];
+    }
+    .card-accent-emerald {
+      @apply h-[5px] bg-gradient-to-r from-emerald-500 to-teal-400;
+    }
+    .card-accent-zinc {
+      @apply h-[5px] bg-gradient-to-r from-zinc-400 to-zinc-300;
+    }
+    .card-body {
+      @apply p-6;
+    }
+
+    .badge {
+      @apply inline-block px-2 py-1 text-xs font-semibold rounded-full;
+    }
+    .badge-violet {
+      @apply text-violet-700 bg-violet-600/10;
+    }
+    .badge-emerald {
+      @apply text-emerald-700 bg-emerald-600/10;
+    }
+    .badge-zinc {
+      @apply text-zinc-600 bg-zinc-100;
+    }
+
+    .tag {
+      @apply px-2 py-1 text-xs font-medium text-zinc-600 bg-zinc-100 rounded-md
+               hover:bg-zinc-200 transition-colors cursor-pointer;
+    }
+
+    .progress-track {
+      @apply w-full h-[5px] bg-zinc-100 rounded-full;
+    }
+    .progress-fill {
+      @apply h-[5px] rounded-full;
+    }
+
+    .btn {
+      @apply mt-5 w-full py-2 text-white text-sm font-semibold rounded-xl
+               active:scale-95 transition-all duration-200 cursor-pointer
+               focus:outline-none focus:ring-2 focus:ring-offset-2;
+    }
+    .btn-violet {
+      @apply bg-violet-600  hover:bg-violet-700  focus:ring-violet-500;
+    }
+    .btn-emerald {
+      @apply bg-emerald-600 hover:bg-emerald-700 focus:ring-emerald-500;
+    }
+    .btn-zinc {
+      @apply bg-zinc-600    hover:bg-zinc-700    focus:ring-zinc-500;
+    }
+  }
+</style>
+
+<div class="min-h-screen bg-zinc-100 p-8">
+  <div
+    class="max-w-5xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
+  >
+    <!-- Karta 1 — HTML je teď čitelný! -->
+    <div class="card shadow-[0_8px_32px_rgba(124,58,237,0.15)]">
+      <div class="card-accent-violet"></div>
+      <div class="card-body">
+        <span class="badge badge-violet">Probíhá</span>
+        <h2 class="mt-3 text-xl font-bold text-zinc-900">Redesign webu</h2>
+        <p class="mt-2 text-sm text-zinc-500 leading-relaxed">
+          Kompletní přepracování firemního webu s důrazem na rychlost a
+          přístupnost.
+        </p>
+        <div class="mt-4 flex flex-wrap gap-2">
+          <span class="tag">UI/UX</span>
+          <span class="tag">Tailwind</span>
+        </div>
+        <div class="mt-5">
+          <div class="flex justify-between text-xs text-zinc-500 mb-1">
+            <span>Postup</span><span>65 %</span>
+          </div>
+          <div class="progress-track">
+            <div class="progress-fill w-[65%] bg-[#7c3aed]"></div>
+          </div>
+        </div>
+        <button class="btn btn-violet">Zobrazit projekt</button>
+      </div>
+    </div>
+
+    <!-- Karta 2 -->
+    <div class="card shadow-[0_8px_32px_rgba(16,185,129,0.1)]">
+      <div class="card-accent-emerald"></div>
+      <div class="card-body">
+        <span class="badge badge-emerald">Dokončeno</span>
+        <h2 class="mt-3 text-xl font-bold text-zinc-900">E-shop API</h2>
+        <p class="mt-2 text-sm text-zinc-500 leading-relaxed">
+          REST API pro e-shop s autentizací, produkty a objednávkami.
+        </p>
+        <div class="mt-4 flex flex-wrap gap-2">
+          <span class="tag">Node.js</span>
+          <span class="tag">REST</span>
+        </div>
+        <div class="mt-5">
+          <div class="flex justify-between text-xs text-zinc-500 mb-1">
+            <span>Postup</span><span>100 %</span>
+          </div>
+          <div class="progress-track">
+            <div class="progress-fill w-full bg-emerald-500"></div>
+          </div>
+        </div>
+        <button class="btn btn-emerald">Zobrazit projekt</button>
+      </div>
+    </div>
+
+    <!-- Karta 3 -->
+    <div class="card shadow-md">
+      <div class="card-accent-zinc"></div>
+      <div class="card-body">
+        <span class="badge badge-zinc">Plánováno</span>
+        <h2 class="mt-3 text-xl font-bold text-zinc-900">Design systém</h2>
+        <p class="mt-2 text-sm text-zinc-500 leading-relaxed">
+          Sdílená knihovna komponent a design tokenů pro celou firmu.
+        </p>
+        <div class="mt-4 flex flex-wrap gap-2">
+          <span class="tag">Figma</span>
+          <span class="tag">shadcn</span>
+        </div>
+        <div class="mt-5">
+          <div class="flex justify-between text-xs text-zinc-500 mb-1">
+            <span>Postup</span><span>10 %</span>
+          </div>
+          <div class="progress-track">
+            <div class="progress-fill w-[10%] bg-zinc-400"></div>
+          </div>
+        </div>
+        <button class="btn btn-zinc">Zobrazit projekt</button>
+      </div>
+    </div>
+  </div>
+</div>
