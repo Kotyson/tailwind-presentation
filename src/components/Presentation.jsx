@@ -42,7 +42,7 @@ export default function Presentation() {
   return (
     <div className="relative h-screen w-screen overflow-hidden text-foreground">
       {/* Slide content */}
-      <div className="h-full w-full">
+      <div className="h-[90%] w-full">
         <SlideComponent />
       </div>
 
